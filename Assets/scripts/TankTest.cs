@@ -5,7 +5,7 @@ using UnityEngine;
 public class TankTest : MonoBehaviour
 {
     public GameObject bullet;
-    public GameObject FiringEnd;
+    //public GameObject FiringEnd;
 
 
     private float Moving;
@@ -26,14 +26,14 @@ public class TankTest : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject clone = Instantiate(bullet);
-            clone.transform.position = FiringEnd.transform.position;
-            clone.GetComponent<Rigidbody>().velocity = FiringEnd.transform.forward * 10;
+          //  clone.transform.position = FiringEnd.transform.position;
+          //  clone.GetComponent<Rigidbody>().velocity = FiringEnd.transform.forward * 10;
         }
     }
 
     private void FixedUpdate()
     {
-        GetComponent<Rigidbody>().velocity = FiringEnd.transform.forward * Moving;
+      //  GetComponent<Rigidbody>().velocity = FiringEnd.transform.forward * Moving;
         this.transform.Rotate(transform.up * Rotate);
     }
 }
