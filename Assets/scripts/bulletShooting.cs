@@ -21,12 +21,11 @@ public class bulletShooting : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-
             GameObject clone = Instantiate(Shell);
             clone.transform.position = bulletposition.transform.position;
             clone.GetComponent<Rigidbody>().velocity = bulletposition.transform.forward* -1 * 50;
             rb.AddForce(transform.forward * recoil);
+            Destroy(clone, 5f);
         }
-
     }
 }
