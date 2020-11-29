@@ -686,6 +686,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 47039523}
     m_Modifications:
+    - target: {fileID: 1663982502, guid: 8e5c783730cb5734b9750d0371b1410f, type: 3}
+      propertyPath: movementSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663982502, guid: 8e5c783730cb5734b9750d0371b1410f, type: 3}
+      propertyPath: turn
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663982502, guid: 8e5c783730cb5734b9750d0371b1410f, type: 3}
+      propertyPath: rotationSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1663982504, guid: 8e5c783730cb5734b9750d0371b1410f, type: 3}
       propertyPath: m_Constraints
       value: 0
