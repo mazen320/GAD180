@@ -21,7 +21,6 @@ public class Movement : MonoBehaviour
         transform.Rotate(0, 0, turn *rotationSpeed*Time.deltaTime);
         transform.Translate(0, 0, forwards * Time.deltaTime * movementSpeed);
     }
-
     void FixedUpdate() 
     {
         
