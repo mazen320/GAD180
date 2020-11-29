@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bulletShooting : MonoBehaviour
+public class bulletShooting1 : MonoBehaviour
 {
 
     public GameObject Shell;
@@ -19,7 +19,7 @@ public class bulletShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire1"))
         {
             GameObject clone = Instantiate(Shell);
             clone.transform.position = bulletposition.transform.position;
