@@ -27,5 +27,6 @@ public class bulletShooting : MonoBehaviour
             clone.GetComponent<Rigidbody>().velocity = bulletposition.transform.forward* -1 * 50;
             rb.AddForce(transform.forward * recoil);
         }
+
     }
 }
