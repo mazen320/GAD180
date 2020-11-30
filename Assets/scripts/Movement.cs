@@ -10,6 +10,9 @@ public class Movement : MonoBehaviour
     public float torque = 5.0f;
     private Rigidbody rb;
 
+    public string VerticalAxisName;
+    public string HorizontalAxisName;
+
     
     void Start()
     {
@@ -19,8 +22,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float turn = Input.GetAxis("Horizontal");
-        float forwards = Input.GetAxis("Vertical");
+        float turn = Input.GetAxis(HorizontalAxisName);
+        float forwards = Input.GetAxis(VerticalAxisName);
 
         transform.Rotate(0, turn * rotationSpeed,0);
         //rb.AddTorque(transform.up * torque * turn);

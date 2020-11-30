@@ -9,6 +9,8 @@ public class bulletShooting : MonoBehaviour
     public GameObject bulletposition;
     private Rigidbody rb;
     private float recoil = 400.0f;
+    public KeyCode ShootingKey;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,7 @@ public class bulletShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetKey(ShootingKey))
         {
             GameObject clone = Instantiate(Shell);
             clone.transform.position = bulletposition.transform.position;
@@ -28,4 +30,6 @@ public class bulletShooting : MonoBehaviour
             Destroy(clone, 5f);
         }
     }
-}
+}     
+
+
