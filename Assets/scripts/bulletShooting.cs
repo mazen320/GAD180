@@ -10,7 +10,9 @@ public class bulletShooting : MonoBehaviour
     private Rigidbody rb;
     private float recoil = 400.0f;
     public KeyCode ShootingKey;
-    
+    private float nextTimeToFire = 0;
+    private float fireRate = 5;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,15 +23,15 @@ public class bulletShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(ShootingKey))
+        if (Input.GetKey(ShootingKey) && Time.time >= nextTimeToFire)
         {
+            nextTimeToFire = Time.time + 1 / fireRate;
             GameObject clone = Instantiate(Shell);
             clone.transform.position = bulletposition.transform.position;
-            clone.GetComponent<Rigidbody>().velocity = bulletposition.transform.forward* -1 * 50;
+            clone.GetComponent<Rigidbody>().velocity = bulletposition.transform.forward * -1 * 50;
             rb.AddForce(transform.forward * recoil);
             Destroy(clone, 5f);
         }
     }
-}     
-
+}
 
