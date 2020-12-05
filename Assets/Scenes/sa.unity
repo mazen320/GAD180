@@ -811,10 +811,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 211388020}
     m_Modifications:
+    - target: {fileID: 1663982504, guid: 8e5c783730cb5734b9750d0371b1410f, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 7098845540305239207, guid: 8e5c783730cb5734b9750d0371b1410f,
         type: 3}
       propertyPath: m_Name
       value: Tank 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098845540305239207, guid: 8e5c783730cb5734b9750d0371b1410f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 7098845540305461575, guid: 8e5c783730cb5734b9750d0371b1410f,
         type: 3}
@@ -977,11 +986,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8075ae5bc2dd2ca43aa9a22b1de48735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
+  movementSpeed: 20
   rotationSpeed: 1
   torque: 5
   VerticalAxisName: VPlayer2
   HorizontalAxisName: HPlayer2
+--- !u!114 &723087824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723087822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbb173c30f079444a51a156e42ed5f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1points: 0
+  Player2points: 0
 --- !u!114 &723087825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,6 +1071,20 @@ MonoBehaviour:
   Shell: {fileID: 1498574577925424461, guid: 301a9cfcae271b2409a2f8e04da8fc11, type: 3}
   bulletposition: {fileID: 770099320}
   ShootingKey: 303
+--- !u!114 &986379745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986379739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbb173c30f079444a51a156e42ed5f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1points: 0
+  Player2points: 0
 --- !u!4 &1335028497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471770, guid: 26419c6407d63bc4abd79bf3d120f522,
@@ -1191,6 +1228,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tank 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098845540305239207, guid: 8e5c783730cb5734b9750d0371b1410f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 7098845540305461575, guid: 8e5c783730cb5734b9750d0371b1410f,
         type: 3}
@@ -1555,6 +1597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1958071447}
+  - component: {fileID: 1958071449}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -1577,6 +1620,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1958071448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985165051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e97b9cbd2e90545bdae304643ea823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1663982503}
+  scoreText: {fileID: 1985165054}
+--- !u!114 &1958071449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958071446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5a0c7b3c2da9b4fbdb9ae6e9479252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointObject: {fileID: 7343304713835652350, guid: a67f497aa07e5fb45b8b17f2bef9936e,
+    type: 3}
+  spawnTime: 3
+  spawnDelay: 1
 --- !u!1 &1962372978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +1740,7 @@ GameObject:
   - component: {fileID: 1985165055}
   - component: {fileID: 1985165054}
   - component: {fileID: 1985165053}
+  - component: {fileID: 1958071448}
   m_Layer: 5
   m_Name: ScoreT1
   m_TagString: Untagged
@@ -1702,11 +1776,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1985165051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66e97b9cbd2e90545bdae304643ea823, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1663982503}
-  scoreText: {fileID: 1985165054}
 --- !u!114 &1985165054
 MonoBehaviour:
   m_ObjectHideFlags: 0
