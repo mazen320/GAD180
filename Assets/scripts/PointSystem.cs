@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PointSystem : MonoBehaviour
 {
-    public int points = 0;
+    public int Player1points = 0;
+    public int Player2points = 0;
     private string Points;
 
     void Start()
@@ -17,14 +18,28 @@ public class PointSystem : MonoBehaviour
     {
         
     }
-
-    void OnCollisionEnter(Collision col) 
+    public void OnCollisionEnter(Collision col) 
     {
+        if (gameObject.tag == "Player1")
+        {
         if (col.gameObject.tag == "pointobj")
         {
-            Debug.Log(points);
+            Debug.Log("Player1");
+            Debug.Log(Player1points);
             col.gameObject.SetActive(false);
-            points ++;
+            Player1points ++;
         }
+    }
+
+        if (gameObject.tag == "Player2")
+        {
+        if (col.gameObject.tag == "pointobj")
+        {
+            Debug.Log("Player2");
+            Debug.Log(Player2points);
+            col.gameObject.SetActive(false);
+            Player2points ++;
+        }
+    }
     }
 }
