@@ -388,6 +388,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 211388020}
     m_Modifications:
+    - target: {fileID: 1663982504, guid: 8e5c783730cb5734b9750d0371b1410f, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 7098845540305239207, guid: 8e5c783730cb5734b9750d0371b1410f,
         type: 3}
       propertyPath: m_Name
@@ -559,6 +563,19 @@ MonoBehaviour:
   torque: 5
   VerticalAxisName: VPlayer2
   HorizontalAxisName: HPlayer2
+--- !u!114 &723087824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723087822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbb173c30f079444a51a156e42ed5f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 0
 --- !u!114 &723087825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,6 +1005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1958071447}
+  - component: {fileID: 1958071448}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -1010,6 +1028,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1958071448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958071446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5a0c7b3c2da9b4fbdb9ae6e9479252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointObject: {fileID: 7343304713835652350, guid: a67f497aa07e5fb45b8b17f2bef9936e,
+    type: 3}
+  spawnTime: 3
+  spawnDelay: 1
 --- !u!1 &1999125092
 GameObject:
   m_ObjectHideFlags: 0
