@@ -6,11 +6,12 @@ public class GameManager : MonoBehaviour
 
     bool gameHasEnded = false;
 
-    public GameObject completeLevelUI;
+    public GameObject completeLevelUIP1;
+    public GameObject completeLevelUIP2;
     
     public void CompleteLevel()
     {
-        completeLevelUI.SetActive(true);
+        completeLevelUIP1.SetActive(true);
     }
 
     public void EndGame()

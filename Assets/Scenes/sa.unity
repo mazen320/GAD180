@@ -376,7 +376,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 368342011}
-  - component: {fileID: 368342010}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -384,19 +383,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &368342010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368342009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b3fd4efffd96e4c8386b6c1eded544, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  completeLevelUI: {fileID: 483502818}
 --- !u!4 &368342011
 Transform:
   m_ObjectHideFlags: 0
@@ -733,7 +719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9329fa8132705b845975d7d1b0f6d752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 368342010}
+  completeLevelUIP1: {fileID: 1489212569}
+  completeLevelUIP2: {fileID: 483502818}
 --- !u!65 &710221036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1093,8 +1080,6 @@ MonoBehaviour:
   Points: 0
   Text: {fileID: 1985165054}
   player: {fileID: 1663982503}
-  Player1points: 0
-  Player2points: 0
 --- !u!1 &1131531705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,8 +1299,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 498.91016, y: 0}
-  m_SizeDelta: {x: -997.8203, y: 0}
+  m_AnchoredPosition: {x: 490.67, y: 0}
+  m_SizeDelta: {x: -981.333, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1489212571
 Animator:
@@ -1706,7 +1691,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAYER 1 IS VICTORIOUS
+  m_Text: PLAYER 2 IS VICTORIOUS
 --- !u!222 &1678906201
 CanvasRenderer:
   m_ObjectHideFlags: 0
