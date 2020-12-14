@@ -11,6 +11,7 @@ public class bulletShooting : MonoBehaviour
     private float recoil = 400.0f;
     public KeyCode ShootingKey;
     private float nextTimeToFire = 0;
+    [SerializeField]
     private float fireRate = 5;
 
 
