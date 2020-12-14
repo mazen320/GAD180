@@ -268,7 +268,6 @@ GameObject:
   - component: {fileID: 192183310}
   - component: {fileID: 192183313}
   - component: {fileID: 192183312}
-  - component: {fileID: 192183311}
   m_Layer: 5
   m_Name: ScoreT2
   m_TagString: Untagged
@@ -295,20 +294,6 @@ RectTransform:
   m_AnchoredPosition: {x: -451, y: 403}
   m_SizeDelta: {x: 102.85297, y: 68.57422}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &192183311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192183309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66e97b9cbd2e90545bdae304643ea823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 37160633}
-  scoreText: {fileID: 192183312}
 --- !u!114 &192183312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,9 +326,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '250
-
-'
+  m_Text: 0
 --- !u!222 &192183313
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1003,8 +986,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbb173c30f079444a51a156e42ed5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1points: 0
-  Player2points: 0
+  Points: 0
+  Text: {fileID: 192183312}
+  player: {fileID: 37160633}
 --- !u!114 &723087825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,8 +1067,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbb173c30f079444a51a156e42ed5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1points: 0
-  Player2points: 0
+  Points: 0
+  Text: {fileID: 1985165054}
+  player: {fileID: 1663982503}
 --- !u!4 &1335028497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471770, guid: 26419c6407d63bc4abd79bf3d120f522,
@@ -1620,20 +1605,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1958071448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985165051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66e97b9cbd2e90545bdae304643ea823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1663982503}
-  scoreText: {fileID: 1985165054}
 --- !u!114 &1958071449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1739,7 +1710,6 @@ GameObject:
   - component: {fileID: 1985165052}
   - component: {fileID: 1985165055}
   - component: {fileID: 1985165054}
-  - component: {fileID: 1958071448}
   m_Layer: 5
   m_Name: ScoreT1
   m_TagString: Untagged
@@ -1798,9 +1768,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '250
-
-'
+  m_Text: 0
 --- !u!222 &1985165055
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class bulletShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(ShootingKey) && Time.time >= nextTimeToFire)
+        if (Input.GetKeyDown(ShootingKey) && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1 / fireRate;
             GameObject clone = Instantiate(Shell);
